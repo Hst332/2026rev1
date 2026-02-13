@@ -5,12 +5,12 @@ on:
     - cron: '0 5 * * 1-5'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   forecast:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Indizes-main
 
     steps:
       - name: Checkout repository
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run index forecasts
         env:
-          PYTHONPATH: ${{ github.workspace }}
+          PYTHONPATH: ${{ github.workspace }}/Indizes-main
         run: |
           python main.py
 
@@ -39,4 +39,3 @@ jobs:
           git add index_forecast.txt forecasts/*.csv .gitignore || true
           git commit -m "Daily index forecast" || echo "No changes to commit"
           git push
-
