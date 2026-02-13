@@ -1,0 +1,56 @@
+from __future__ import annotations
+from datetime import datetime, timezone
+import pandas as pd
+
+from trade_filter import FILTER_PARAMS
+
+
+def _fmt(x, nd=2):
+    try:
+        return f"{float(x):.{nd}f}"
+    except Exception:
+        return str(x)
+
+
+def write_index_forecast_txt(df: pd.DataFrame, path: str = "index_forecast.txt") -> None:
+    run_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    lines = []
+    lines.append(f"Index Forecasts – {run_time}")
+    lines.append("=" * 80)
+    lines.append("")
+    lines.append("Index    | Prev Close | Current | Δ %    | Signal | Conf | Regime | Rule")
+    lines.append("-" * 80)
+
+    if df.empty:
+        lines.append("NO DATA (forecast failed before creating rows)")
+    else:
+        for _, r in df.iterrows():
+            lines.append(
+                f"{str(r.get('asset','')):<8} | "
+                f"{_fmt(r.get('prev_close', '')):>10} | "
+                f"{_fmt(r.get('close', '')):>7} | "
+                f"{_fmt(r.get('daily_return', ''), 2):>6}% | "
+                f"{str(r.get('signal','')):<6} | "
+                f"{_fmt(r.get('confidence',''), 2):>4} | "
+                f"{str(r.get('regime','')):<6} | "
+                f"{str(r.get('rule',''))}"
+            )
+
+    lines.append("")
+    lines.append("")
+    lines.append("TRADING RULES (FINAL – BACKTEST VALIDATED)")
+    lines.append("")
+
+    for asset, p in FILTER_PARAMS.items():
+        lines.append(asset)
+        lines.append(f"- LONG  if prob_up >= {p['long_th']}")
+        lines.append(f"- SHORT if prob_up <= {p['short_th']}")
+        lines.append("- Otherwise: HOLD")
+        lines.append(f"- Trendfilter: close vs MA{p['ma_len']}")
+        lines.append(f"- Vol-Filter: ATR% <= {p['atr_pct_max']}")
+        lines.append(f"- Cooldown: |yesterday return| <= {p['cooldown_absret_max']}%")
+        lines.append("")
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
