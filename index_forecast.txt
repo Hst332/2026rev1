@@ -1,56 +1,51 @@
-from __future__ import annotations
-from datetime import datetime, timezone
-import pandas as pd
+Index Forecasts – 2026-02-13 18:11 UTC
+==============================================================================================================
 
-from trade_filter import FILTER_PARAMS
+Index    | Prev Close | Current | Δ %    | Signal | Conf | Regime   | ProbUp | Rule
+--------------------------------------------------------------------------------------------------------------
+DAX      |   24897.76 | 24903.35 |   0.02% | HOLD   | 0.05 | neutral  |  0.53 | M1:neutral_zone
+ATX      |    5604.43 | 5615.97 |   0.21% | BUY    | 0.30 | neutral  |  0.65 | M1:prob_up>=0.58+M2:trend_ok+M3:atr_ok(0.86%)+M4:cooldown_ok(|ret|=0.21%)
+DOW      |   49653.33 | 49683.38 |   0.06% | BUY    | 0.20 | neutral  |  0.60 | M1:prob_up>=0.55+M2:trend_ok+M3:atr_ok(0.81%)+M4:cooldown_ok(|ret|=0.06%)
+NASDAQ   |   22712.92 | 22694.56 |  -0.08% | BUY    | 0.24 | neutral  |  0.62 | M1:prob_up>=0.6+M2:trend_ok+M3:atr_ok(1.02%)+M4:cooldown_ok(|ret|=0.08%)
+SP500    |    6872.91 | 6870.55 |  -0.03% | BUY    | 0.23 | neutral  |  0.62 | M1:prob_up>=0.56+M2:trend_ok+M3:atr_ok(0.82%)+M4:cooldown_ok(|ret|=0.03%)
+NIKKEI   |   56942.69 | 57074.99 |   0.23% | HOLD   | 0.03 | neutral  |  0.52 | M1:neutral_zone
 
 
-def _fmt(x, nd=2):
-    try:
-        return f"{float(x):.{nd}f}"
-    except Exception:
-        return str(x)
+TRADING RULES (Thresholds)
 
+DAX
+- LONG  if prob_up >= 0.56
+- SHORT if prob_up <= 0.44
+- Otherwise: HOLD
+- Note: Trendfolge, keine Trades in Neutralzone
 
-def write_index_forecast_txt(df: pd.DataFrame, path: str = "index_forecast.txt") -> None:
-    run_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+ATX
+- LONG  if prob_up >= 0.58
+- SHORT if prob_up <= 0.42
+- Otherwise: HOLD
+- Note: Stärkerer Filter, weniger Trades
 
-    lines = []
-    lines.append(f"Index Forecasts – {run_time}")
-    lines.append("=" * 80)
-    lines.append("")
-    lines.append("Index    | Prev Close | Current | Δ %    | Signal | Conf | Regime | Rule")
-    lines.append("-" * 80)
+DOW
+- LONG  if prob_up >= 0.55
+- SHORT if prob_up <= 0.45
+- Otherwise: HOLD
+- Note: Stabil, engeres Band ok
 
-    if df.empty:
-        lines.append("NO DATA (forecast failed before creating rows)")
-    else:
-        for _, r in df.iterrows():
-            lines.append(
-                f"{str(r.get('asset','')):<8} | "
-                f"{_fmt(r.get('prev_close', '')):>10} | "
-                f"{_fmt(r.get('close', '')):>7} | "
-                f"{_fmt(r.get('daily_return', ''), 2):>6}% | "
-                f"{str(r.get('signal','')):<6} | "
-                f"{_fmt(r.get('confidence',''), 2):>4} | "
-                f"{str(r.get('regime','')):<6} | "
-                f"{str(r.get('rule',''))}"
-            )
+NASDAQ
+- LONG  if prob_up >= 0.60
+- SHORT if prob_up <= 0.40
+- Otherwise: HOLD
+- Note: Volatil → höhere Schwelle
 
-    lines.append("")
-    lines.append("")
-    lines.append("TRADING RULES (FINAL – BACKTEST VALIDATED)")
-    lines.append("")
+SP500
+- LONG  if prob_up >= 0.56
+- SHORT if prob_up <= 0.44
+- Otherwise: HOLD
+- Note: Mittlere Schwelle, breit diversifiziert
 
-    for asset, p in FILTER_PARAMS.items():
-        lines.append(asset)
-        lines.append(f"- LONG  if prob_up >= {p['long_th']}")
-        lines.append(f"- SHORT if prob_up <= {p['short_th']}")
-        lines.append("- Otherwise: HOLD")
-        lines.append(f"- Trendfilter: close vs MA{p['ma_len']}")
-        lines.append(f"- Vol-Filter: ATR% <= {p['atr_pct_max']}")
-        lines.append(f"- Cooldown: |yesterday return| <= {p['cooldown_absret_max']}%")
-        lines.append("")
+NIKKEI
+- LONG  if prob_up >= 0.59
+- SHORT if prob_up <= 0.41
+- Otherwise: HOLD
+- Note: Trendstark, aber Gap-Risiko
 
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
