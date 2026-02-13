@@ -1,0 +1,7 @@
+timestamp_utc,asset,confidence,regime,prob_up,score,ticker,price_current,price_prev_close,return_daily_pct,prob_down,signal_raw,signal_final,rule_label,data_status
+2026-02-13 19:11 UTC,DAX,0.0503,neutral,0.5252,0.000336,^GDAXI,24903.35,24897.76,0.02,0.4748,NA,HOLD,M1:neutral_zone,ok
+2026-02-13 19:11 UTC,ATX,0.3021,neutral,0.651,0.002079,^ATX,5615.97,5604.43,0.21,0.349,NA,BUY,M1:prob_up>=0.58+M2:trend_ok+M3:atr_ok(0.86%)+M4:cooldown_ok(|ret|=0.21%),ok
+2026-02-13 19:11 UTC,DOW,0.0537,neutral,0.5269,0.000359,^DJI,49651.03,49669.98,-0.04,0.4731,NA,HOLD,M1:neutral_zone,ok
+2026-02-13 19:11 UTC,NASDAQ,0.0752,neutral,0.5376,0.000502,^IXIC,22694.27,22697.64,-0.01,0.4624,NA,HOLD,M1:neutral_zone,ok
+2026-02-13 19:11 UTC,SP500,0.0494,neutral,0.5247,0.000329,^GSPC,6869.78,6871.82,-0.03,0.4753,NA,HOLD,M1:neutral_zone,ok
+2026-02-13 19:11 UTC,NIKKEI,0.0341,neutral,0.5171,0.000228,^N225,57074.99,56942.69,0.23,0.4829,NA,HOLD,M1:neutral_zone,ok
