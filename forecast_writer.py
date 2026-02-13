@@ -1,73 +1,103 @@
-from __future__ import annotations
+import os
+from datetime import datetime
 
-from datetime import datetime, timezone
-from pathlib import Path
-from typing import Any
-
-import pandas as pd
-
-from trade_filter import RULES
+OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "forecast_output.txt")
 
 
-def write_index_forecast_txt(df: pd.DataFrame, txt_file: str = "index_forecast.txt") -> str:
-    """Write a human-readable forecast report.
+def write_daily_summary(results):
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        f.write(f"Run time (UTC): {datetime.utcnow():%Y-%m-%d %H:%M:%S}\n")
+        f.write("=" * 160 + "\n")
+        f.write(
+            "ASSET         CLOSE     SCORE   SIGNAL       1-5D      2-3W      "
+            "GPT 1-5D   GPT 2-3W   FINAL           "
+            "DATA_OK  LAST_BAR_UTC         AGE_s  ROWS  NAN_LAST  STALE  ZUSATZINFO\n"
+        )
+        f.write("-" * 160 + "\n")
 
-    Expected columns (from main.py):
-      asset, price_prev_close, price_current, return_daily_pct,
-      signal_final, confidence, regime, prob_up, rule_label
-    """
-    runtime = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        for r in results:
+            close = r.get("close", None)
+            close_str = f"{close:>7.1f}" if isinstance(close, (int, float)) else f"{'NA':>7}"
 
-    with open(txt_file, "w", encoding="utf-8") as f:
-        f.write(f"Index Forecasts – {runtime}\n")
-        f.write("=" * 110 + "\n\n")
-        f.write("Index    | Prev Close | Current | Δ %    | Signal | Conf | Regime   | ProbUp | Rule\n")
-        f.write("-" * 110 + "\n")
+            data_ok = bool(r.get("data_ok", False))
+            last_bar = str(r.get("last_bar_utc", "NA"))
+            age_s = int(r.get("age_s", 10**9)) if str(r.get("age_s", "")).strip() != "" else 10**9
+            rows = int(r.get("rows", 0)) if str(r.get("rows", "")).strip() != "" else 0
+            nan_last = int(r.get("nan_last", 1)) if str(r.get("nan_last", "")).strip() != "" else 1
+            stale = int(r.get("stale", 1)) if str(r.get("stale", "")).strip() != "" else 1
 
-        if df is None or df.empty:
-            f.write("No forecasts available.\n")
-        else:
-            for _, row in df.iterrows():
-                asset = str(row.get("asset", ""))
-                prev_close = float(row.get("price_prev_close", 0.0) or 0.0)
-                close = float(row.get("price_current", 0.0) or 0.0)
-                daily_return = float(row.get("return_daily_pct", 0.0) or 0.0)
-                signal = str(row.get("signal_final", "HOLD"))
-                conf = float(row.get("confidence", 0.0) or 0.0)
-                regime = str(row.get("regime", ""))
-                prob_up = float(row.get("prob_up", 0.5) or 0.5)
-                rule = str(row.get("rule_label", ""))
+            final = r.get("final", "NO_TRADE")
 
-                f.write(
-                    f"{asset:<8} | {prev_close:>10.2f} | {close:>7.2f} | "
-                    f"{daily_return:>6.2f}% | {signal:<6} | {conf:<4.2f} | "
-                    f"{regime:<8} | {prob_up:>5.2f} | {rule}\n"
-                )
+            # HARD SAFETY: If data not OK, force final to NO_TRADE(DATA)
+            if not data_ok:
+                final = "NO_TRADE(DATA)"
 
-        f.write("\n\nTRADING RULES (Thresholds)\n\n")
-        for asset, rule in RULES.items():
-            # RULES can be {'long','short'} or {'long_entry','short_entry'} depending on version
-            long_th = rule.get("long_entry", rule.get("long", 0.0))
-            short_th = rule.get("short_entry", rule.get("short", 0.0))
-            f.write(f"{asset}\n")
-            f.write(f"- LONG  if prob_up >= {float(long_th):.2f}\n")
-            f.write(f"- SHORT if prob_up <= {float(short_th):.2f}\n")
-            f.write("- Otherwise: HOLD\n")
-            note = rule.get("note", "")
-            if note:
-                f.write(f"- Note: {note}\n")
-            f.write("\n")
+            f.write(
+                f"{r.get('asset','NA'):<13}"
+                f"{close_str}    "
+                f"{r.get('score', 0.0):>5.3f}   "
+                f"{r.get('signal', 'NA'):<11}"
+                f"{r.get('f_1_5', 0.0):<9}"
+                f"{r.get('f_2_3', 0.0):<9}"
+                f"{r.get('gpt_1_5d', 'NA'):<10}"
+                f"{r.get('gpt_2_3w', 'NA'):<11}"
+                f"{final:<14}   "
+                f"{str(data_ok):<6}  "
+                f"{last_bar:<19}  "
+                f"{age_s:>5}  "
+                f"{rows:>4}  "
+                f"{nan_last:>8}  "
+                f"{stale:>5}  "
+                f"{r.get('zusatzinfo', '')}\n"
+            )
 
-    return txt_file
+            # If blocked, print the explicit reason on the next line (so you see it instantly)
+            if not data_ok:
+                reason = r.get("guard_reason", r.get("zusatzinfo", "DATA BLOCK"))
+                f.write(f"{'':<13}>>> BLOCKED: {reason}\n")
 
+        f.write("=" * 160 + "\n\n")
 
-def write_forecasts(forecasts: list[dict[str, Any]], out_dir: str = "forecasts") -> tuple[str, str]:
-    """Backwards compatible helper: accepts list[dict] and writes CSV + TXT."""
-    Path(out_dir).mkdir(exist_ok=True)
-    df = pd.DataFrame(forecasts)
+        # -------------------------------------------------
+        # TRADING RULES (STATIC TEXT BLOCK)
+        # -------------------------------------------------
+        f.write("TRADING RULES (FINAL – BACKTEST VALIDATED)\n\n")
 
-    csv_path = Path(out_dir) / "daily_index_forecast.csv"
-    df.to_csv(csv_path, index=False)
+        f.write(
+            "GOLD\n"
+            "- Direction: LONG only\n"
+            "- Entry: prob_up >= 0.53\n"
+            "- Position sizing:\n"
+            "    0.53 - 0.55 -> 50 %\n"
+            "    >= 0.55     -> 100 %\n"
+            "- Holding period: 5-20 trading days\n"
+            "- Leverage: max 3-5\n"
+            "- No short positions\n\n"
 
-    txt_file = write_index_forecast_txt(df, "index_forecast.txt")
-    return str(csv_path), txt_file
+            "SILVER\n"
+            "- Direction: LONG only\n"
+            "- Entry: prob_up >= 0.69\n"
+            "- Trades/year: ~12\n"
+            "- Leverage: max 15\n"
+            "- Stop-loss: hard -20 %\n"
+            "- Ignore all signals below threshold\n\n"
+
+            "COPPER\n"
+            "- Direction: LONG only\n"
+            "- Entry: prob_up >= 0.56\n"
+            "- Trades/year: ~60-150\n"
+            "- Leverage: max 5-10\n"
+            "- Stop-loss: hard -20 %\n"
+            "- No shorts\n\n"
+
+            "NATURAL GAS\n"
+            "- Direction: LONG & SHORT\n"
+            "- LONG  if prob_up >= 0.56\n"
+            "- SHORT if prob_up <= 0.44\n"
+            "- Otherwise: NO TRADE\n"
+            "- Leverage: max 10\n"
+            "- Stop-loss: hard -20 %\n\n"
+
+            "NOT TRADED\n"
+            "- Crude Oil (too impulsive / unstable regimes)\n"
+        )
