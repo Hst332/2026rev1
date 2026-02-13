@@ -1,0 +1,68 @@
+[
+  {
+    "asset": "DAX",
+    "signal": "BUY",
+    "prev_close": 25014.87,
+    "confidence": 0.2516647159324448,
+    "regime": "neutral",
+    "close": 24987.85,
+    "daily_return": -0.11,
+    "score": 0.0025,
+    "prob_up": 0.0025
+  },
+  {
+    "asset": "ATX",
+    "signal": "SELL",
+    "prev_close": 5753.52,
+    "confidence": 0.3110811999658558,
+    "regime": "neutral",
+    "close": 5724.31,
+    "daily_return": -0.51,
+    "score": -0.0031,
+    "prob_up": -0.0031
+  },
+  {
+    "asset": "DOW",
+    "signal": "BUY",
+    "prev_close": 50135.87,
+    "confidence": 0.3247073417146712,
+    "regime": "neutral",
+    "close": 50188.14,
+    "daily_return": 0.1,
+    "score": 0.0032,
+    "prob_up": 0.0032
+  },
+  {
+    "asset": "NASDAQ",
+    "signal": "HOLD",
+    "prev_close": 23238.67,
+    "confidence": 0.007557346269145286,
+    "regime": "neutral",
+    "close": 23102.47,
+    "daily_return": -0.59,
+    "score": 0.0001,
+    "prob_up": 0.0001
+  },
+  {
+    "asset": "SP500",
+    "signal": "HOLD",
+    "prev_close": 6964.82,
+    "confidence": 0.09719892407392128,
+    "regime": "neutral",
+    "close": 6941.81,
+    "daily_return": -0.33,
+    "score": 0.001,
+    "prob_up": 0.001
+  },
+  {
+    "asset": "NIKKEI",
+    "signal": "BUY",
+    "prev_close": 56363.94,
+    "confidence": 0.6836385310632997,
+    "regime": "neutral",
+    "close": 57650.54,
+    "daily_return": 2.28,
+    "score": 0.0068,
+    "prob_up": 0.0068
+  }
+]

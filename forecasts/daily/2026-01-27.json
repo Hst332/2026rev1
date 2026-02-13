@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "DAX",
+    "signal": "BUY",
+    "confidence": 0.006000946680472463,
+    "regime": "neutral"
+  },
+  {
+    "asset": "ATX",
+    "signal": "BUY",
+    "confidence": 0.0022937569652099255,
+    "regime": "neutral"
+  },
+  {
+    "asset": "DOW",
+    "signal": "HOLD",
+    "confidence": 0.001792596526181356,
+    "regime": "neutral"
+  },
+  {
+    "asset": "NASDAQ",
+    "signal": "HOLD",
+    "confidence": 0.0003715955406857319,
+    "regime": "neutral"
+  },
+  {
+    "asset": "SP500",
+    "signal": "SELL",
+    "confidence": 0.01131105229496181,
+    "regime": "neutral"
+  },
+  {
+    "asset": "NIKKEI",
+    "signal": "SELL",
+    "confidence": 0.006135748167897037,
+    "regime": "neutral"
+  }
+]

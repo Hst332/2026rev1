@@ -1,0 +1,62 @@
+[
+  {
+    "asset": "DAX",
+    "signal": "HOLD",
+    "prev_close": 24538.81,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 24797.52,
+    "daily_return": 1.05,
+    "score": 0.0
+  },
+  {
+    "asset": "ATX",
+    "signal": "HOLD",
+    "prev_close": 5604.9,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 5658.25,
+    "daily_return": 0.95,
+    "score": 0.0
+  },
+  {
+    "asset": "DOW",
+    "signal": "HOLD",
+    "prev_close": 48892.47,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 49407.66,
+    "daily_return": 1.05,
+    "score": 0.0
+  },
+  {
+    "asset": "NASDAQ",
+    "signal": "HOLD",
+    "prev_close": 23461.82,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 23592.11,
+    "daily_return": 0.56,
+    "score": 0.0
+  },
+  {
+    "asset": "SP500",
+    "signal": "HOLD",
+    "prev_close": 6939.03,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 6976.44,
+    "daily_return": 0.54,
+    "score": 0.0
+  },
+  {
+    "asset": "NIKKEI",
+    "signal": "HOLD",
+    "prev_close": 53322.85,
+    "confidence": 0.0,
+    "regime": "neutral",
+    "close": 54730.21,
+    "daily_return": 2.64,
+    "score": 0.0
+  }
+]

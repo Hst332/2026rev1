@@ -1,0 +1,1432 @@
+[
+  {
+    "date": "2026-01-26",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "date": "2026-01-27",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "date": "2026-01-27",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "date": "2026-01-27",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "date": "2026-01-27",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 07:28 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 19:03 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 19:12 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 19:22 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 19:33 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 19:40 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-27 20:12 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "BUY",
+        "confidence": 0.006000946680472463,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "BUY",
+        "confidence": 0.0022937569652099255,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.001792596526181356,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0003715955406857319,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "SELL",
+        "confidence": 0.01131105229496181,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "SELL",
+        "confidence": 0.006135748167897037,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-28 05:35 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "BUY",
+        "confidence": 0.006881370711872492,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.00012773498699059083,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0004946362485005462,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.00015724182226919403,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "BUY",
+        "confidence": 0.003937750320769995,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0005012046853530627,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-28 07:47 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "SELL",
+        "confidence": 0.005013119886228212,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "SELL",
+        "confidence": 0.005339720177462382,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "BUY",
+        "confidence": 0.00395096176230676,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0005696976739009818,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "BUY",
+        "confidence": 0.003533177227373563,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 5.1285554028890346e-05,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-28 07:59 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-28 19:30 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24822.79,
+        "daily_return": -0.29,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5620.66,
+        "daily_return": 0.02,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48903.83,
+        "daily_return": -0.2,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23825.43,
+        "daily_return": 0.03,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6964.77,
+        "daily_return": -0.2,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53358.71,
+        "daily_return": 0.05,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-28 19:38 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24822.79,
+        "daily_return": -0.29,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5620.66,
+        "daily_return": 0.02,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48975.79,
+        "daily_return": -0.06,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23860.58,
+        "daily_return": 0.18,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6974.8,
+        "daily_return": -0.05,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53358.71,
+        "daily_return": 0.05,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-29 05:51 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24822.79,
+        "daily_return": -0.29,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5620.66,
+        "daily_return": 0.02,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 49015.6,
+        "daily_return": 0.02,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23857.45,
+        "daily_return": 0.17,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6978.03,
+        "daily_return": -0.01,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53539.24,
+        "daily_return": 0.34,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-30 05:53 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24309.46,
+        "daily_return": -2.07,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5578.55,
+        "daily_return": -0.75,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 49071.56,
+        "daily_return": 0.11,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23685.12,
+        "daily_return": -0.72,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6969.01,
+        "daily_return": -0.13,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53479.16,
+        "daily_return": 0.19,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-01 10:07 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24538.81,
+        "daily_return": 0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5604.9,
+        "daily_return": 0.47,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48892.47,
+        "daily_return": -0.36,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23461.82,
+        "daily_return": -0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6939.03,
+        "daily_return": -0.43,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53322.85,
+        "daily_return": -0.1,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-01 10:11 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24538.81,
+        "daily_return": 0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5604.9,
+        "daily_return": 0.47,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48892.47,
+        "daily_return": -0.36,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23461.82,
+        "daily_return": -0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6939.03,
+        "daily_return": -0.43,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53322.85,
+        "daily_return": -0.1,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-01 19:50 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "prev_close": 24309.46,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24538.81,
+        "daily_return": 0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "prev_close": 5578.55,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5604.9,
+        "daily_return": 0.47,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "prev_close": 49071.56,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48892.47,
+        "daily_return": -0.36,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23685.12,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23461.82,
+        "daily_return": -0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6969.01,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6939.03,
+        "daily_return": -0.43,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "prev_close": 53375.6,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53322.85,
+        "daily_return": -0.1,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-02 06:06 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "prev_close": 24309.46,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24538.81,
+        "daily_return": 0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "prev_close": 5578.55,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5604.9,
+        "daily_return": 0.47,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "prev_close": 49071.56,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 48892.47,
+        "daily_return": -0.36,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23685.12,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23461.82,
+        "daily_return": -0.94,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6969.01,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6939.03,
+        "daily_return": -0.43,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "prev_close": 53375.6,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53322.85,
+        "daily_return": -0.1,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-02 14:53 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "prev_close": 24309.46,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24558.2,
+        "daily_return": 1.02,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "prev_close": 5578.55,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5639.06,
+        "daily_return": 1.08,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "prev_close": 48892.47,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 49177.36,
+        "daily_return": 0.58,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23461.82,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23509.7,
+        "daily_return": 0.2,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6939.03,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6956.9,
+        "daily_return": 0.26,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "prev_close": 53375.6,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 53322.85,
+        "daily_return": -0.1,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-03 05:56 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "prev_close": 24538.81,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24797.52,
+        "daily_return": 1.05,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "prev_close": 5604.9,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5658.25,
+        "daily_return": 0.95,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "prev_close": 48892.47,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 49407.66,
+        "daily_return": 1.05,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23461.82,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23592.11,
+        "daily_return": 0.56,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6939.03,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6976.44,
+        "daily_return": 0.54,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "prev_close": 53322.85,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 54730.21,
+        "daily_return": 2.64,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-04 05:54 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "prev_close": 24797.52,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 24780.79,
+        "daily_return": -0.07,
+        "score": 0.0
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "prev_close": 5658.25,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 5732.93,
+        "daily_return": 1.32,
+        "score": 0.0
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "prev_close": 49407.66,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 49240.99,
+        "daily_return": -0.34,
+        "score": 0.0
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23592.11,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 23255.19,
+        "daily_return": -1.43,
+        "score": 0.0
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6976.44,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 6917.81,
+        "daily_return": -0.84,
+        "score": 0.0
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "prev_close": 54720.66,
+        "confidence": 0.0,
+        "regime": "neutral",
+        "close": 54266.28,
+        "daily_return": -0.83,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-05 06:00 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "HOLD",
+        "confidence": 0.06973504496601614,
+        "regime": "neutral",
+        "prev_close": 24780.79,
+        "close": 24603.04,
+        "daily_return": -0.72,
+        "score": -0.0007
+      },
+      {
+        "asset": "ATX",
+        "signal": "HOLD",
+        "confidence": 0.14463310693590414,
+        "regime": "neutral",
+        "prev_close": 5732.93,
+        "close": 5748.06,
+        "daily_return": 0.26,
+        "score": 0.0014
+      },
+      {
+        "asset": "DOW",
+        "signal": "HOLD",
+        "confidence": 0.19224210132509412,
+        "regime": "neutral",
+        "prev_close": 49240.99,
+        "close": 49501.3,
+        "daily_return": 0.53,
+        "score": 0.0019
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "SELL",
+        "confidence": 0.6750736424121473,
+        "regime": "neutral",
+        "prev_close": 23255.19,
+        "close": 22904.58,
+        "daily_return": -1.51,
+        "score": -0.0068
+      },
+      {
+        "asset": "SP500",
+        "signal": "SELL",
+        "confidence": 0.2308770800965665,
+        "regime": "neutral",
+        "prev_close": 6917.81,
+        "close": 6882.72,
+        "daily_return": -0.51,
+        "score": -0.0023
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "HOLD",
+        "confidence": 0.0017370939290772824,
+        "regime": "neutral",
+        "prev_close": 54293.36,
+        "close": 53824.0,
+        "daily_return": -0.86,
+        "score": -0.0
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-02-11 06:11 UTC",
+    "forecasts": [
+      {
+        "asset": "DAX",
+        "signal": "BUY",
+        "prev_close": 25014.87,
+        "confidence": 0.2516647159324448,
+        "regime": "neutral",
+        "close": 24987.85,
+        "daily_return": -0.11,
+        "score": 0.0025,
+        "prob_up": 0.0025
+      },
+      {
+        "asset": "ATX",
+        "signal": "SELL",
+        "prev_close": 5753.52,
+        "confidence": 0.3110811999658558,
+        "regime": "neutral",
+        "close": 5724.31,
+        "daily_return": -0.51,
+        "score": -0.0031,
+        "prob_up": -0.0031
+      },
+      {
+        "asset": "DOW",
+        "signal": "BUY",
+        "prev_close": 50135.87,
+        "confidence": 0.3247073417146712,
+        "regime": "neutral",
+        "close": 50188.14,
+        "daily_return": 0.1,
+        "score": 0.0032,
+        "prob_up": 0.0032
+      },
+      {
+        "asset": "NASDAQ",
+        "signal": "HOLD",
+        "prev_close": 23238.67,
+        "confidence": 0.007557346269145286,
+        "regime": "neutral",
+        "close": 23102.47,
+        "daily_return": -0.59,
+        "score": 0.0001,
+        "prob_up": 0.0001
+      },
+      {
+        "asset": "SP500",
+        "signal": "HOLD",
+        "prev_close": 6964.82,
+        "confidence": 0.09719892407392128,
+        "regime": "neutral",
+        "close": 6941.81,
+        "daily_return": -0.33,
+        "score": 0.001,
+        "prob_up": 0.001
+      },
+      {
+        "asset": "NIKKEI",
+        "signal": "BUY",
+        "prev_close": 56363.94,
+        "confidence": 0.6836385310632997,
+        "regime": "neutral",
+        "close": 57650.54,
+        "daily_return": 2.28,
+        "score": 0.0068,
+        "prob_up": 0.0068
+      }
+    ]
+  }
+]

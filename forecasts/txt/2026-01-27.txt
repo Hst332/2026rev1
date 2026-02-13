@@ -1,0 +1,9 @@
+Index Forecasts – 2026-01-27
+========================================
+
+DAX: HOLD (Confidence: 0.00, Regime: neutral)
+ATX: HOLD (Confidence: 0.00, Regime: neutral)
+DOW: HOLD (Confidence: 0.00, Regime: neutral)
+NASDAQ: HOLD (Confidence: 0.00, Regime: neutral)
+SP500: HOLD (Confidence: 0.00, Regime: neutral)
+NIKKEI: HOLD (Confidence: 0.00, Regime: neutral)
