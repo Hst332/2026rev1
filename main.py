@@ -5,7 +5,6 @@ import pandas as pd
 from config import ASSETS
 from forecast_asset import forecast_asset
 from trade_filter import apply_trade_filter
-from schema_validator import validate_forecast_dataframe
 from forecast_writer import write_index_forecast_txt
 
 os.makedirs("forecasts", exist_ok=True)
