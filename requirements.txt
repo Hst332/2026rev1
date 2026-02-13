@@ -3,7 +3,6 @@ pandas>=2.0
 numpy>=1.24
 
 # Market data
-# Yahoo Finance wrapper (indices, equities, ETFs)
 yfinance>=0.2.36
 
 # Time series & statistics
@@ -16,9 +15,3 @@ scikit-learn>=1.3
 # Date & time utilities
 python-dateutil>=2.8
 pytz
-
-# File & path handling (std, but explicit for clarity)
-pathlib
-
-# Optional: plotting / diagnostics (not required for GitHub Actions)
-# matplotlib
