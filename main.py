@@ -1,83 +1,41 @@
-from datetime import datetime
+from __future__ import annotations
+
 import os
+from datetime import datetime
+
 import pandas as pd
 
-from config import ASSETS
 from forecast_asset import forecast_asset
-from trade_filter import apply_trade_filter
+from config import ASSETS
 from forecast_writer import write_index_forecast_txt
+from schema_validator import validate_forecast_dataframe
 
-os.makedirs("forecasts", exist_ok=True)
 
-results = []
+def main():
+    os.makedirs("forecasts", exist_ok=True)
 
-timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M")
+    results = []
+    for asset, cfg in ASSETS.items():
+        print(f"Running forecast for {asset}")
+        try:
+            r = forecast_asset(asset, cfg)
+            results.append(r)
+        except Exception as e:
+            print(f"ERROR {asset}: {e}")
 
-for asset_name, cfg in ASSETS.items():
+    df = pd.DataFrame(results)
 
-    print(f"Running forecast for {asset_name}")
+    # Validator: gibt df zurück (safe auch wenn df leer ist)
+    df = validate_forecast_dataframe(df) if not df.empty else df
 
-    try:
-        forecast = forecast_asset(asset_name, cfg)
+    # CSV immer schreiben (auch wenn leer, dann nur header)
+    out_csv = "forecasts/daily_index_forecast.csv"
+    df.to_csv(out_csv, index=False)
+    print("Saved:", out_csv)
 
-        signal_final, rule_long, rule_short, rule_label = apply_trade_filter(
-            asset_name,
-            forecast["prob_up"]
-        )
+    # TXT schreiben
+    write_index_forecast_txt(df)
 
-        row = {
-            "timestamp_utc": timestamp,
-            "asset": asset_name,
-            "ticker": cfg["ticker"],
-            "price_current": forecast["close"],
-            "price_prev_close": forecast["prev_close"],
-            "return_daily_pct": forecast["daily_return"],
-            "score": forecast["score"],
-            "prob_up": forecast["prob_up"],
-            "prob_down": forecast["prob_down"],
-            "confidence": forecast["confidence"],
-            "regime": forecast["regime"],
-            "rule_long_min": rule_long,
-            "rule_short_max": rule_short,
-            "signal_raw": forecast["signal"],
-            "signal_final": signal_final,
-            "rule_label": rule_label,
-            "data_status": "ok",
-        }
 
-        results.append(row)
-
-    except Exception as e:
-
-        print(f"ERROR {asset_name}: {e}")
-
-        results.append({
-            "timestamp_utc": timestamp,
-            "asset": asset_name,
-            "ticker": cfg["ticker"],
-            "price_current": 0,
-            "price_prev_close": 0,
-            "return_daily_pct": 0,
-            "score": 0,
-            "prob_up": 0.5,
-            "prob_down": 0.5,
-            "confidence": 0,
-            "regime": "error",
-            "rule_long_min": 0,
-            "rule_short_max": 0,
-            "signal_raw": "HOLD",
-            "signal_final": "HOLD",
-            "rule_label": "error",
-            "data_status": str(e),
-        })
-
-df = pd.DataFrame(results)
-
-df = validate_forecast_dataframe(df)
-
-csv_path = "forecasts/daily_index_forecast.csv"
-df.to_csv(csv_path, index=False)
-
-write_index_forecast_txt(df)
-
-print("Forecast completed successfully.")
+if __name__ == "__main__":
+    main()
