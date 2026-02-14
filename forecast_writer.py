@@ -1,105 +1,48 @@
-from datetime import datetime, timezone
-import pandas as pd
-
-from trade_filter import FILTER_PARAMS
+from datetime import datetime
 
 
-def _utc_now_str() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+def write_index_forecast_txt(df, filename="index_forecast.txt"):
 
-
-def _fmt_pct(x) -> str:
-    try:
-        return f"{float(x):.2f}%"
-    except Exception:
-        return "n/a"
-
-
-def _fmt_float(x, nd=2) -> str:
-    try:
-        return f"{float(x):.{nd}f}"
-    except Exception:
-        return "n/a"
-
-
-def _rule_text(asset: str) -> str:
-    cfg = FILTER_PARAMS.get(asset, {})
-    long_thr = cfg.get("long_thr")
-    short_thr = cfg.get("short_thr")
-    note = cfg.get("note", "")
-
-    if long_thr is None or short_thr is None:
-        return "n/a"
-
-    s = f"LONG≥{long_thr:.2f} / SHORT≤{short_thr:.2f}"
-    if note:
-        s += f" ({note})"
-    return s
-
-
-def write_index_forecast_txt(df: pd.DataFrame, filename: str = "index_forecast.txt") -> None:
-    """
-    Erwartet DataFrame mit Spalten:
-    asset, prev_close, close, daily_return, signal, confidence, regime, prob_up, rule
-    (main.py / trade_filter füllen das)
-    """
-    ts = _utc_now_str()
+    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
     lines = []
-    lines.append(f"Index Forecasts – {ts}")
+    lines.append(f"Index Forecasts – {now}")
     lines.append("=" * 110)
     lines.append("")
-    header = (
-        "Index    | Prev Close | Current | Δ %    | Signal | Conf | Regime   | ProbUp | Rule"
+    lines.append(
+        "Index    | Prev Close | Current | Δ %    | Conf | Regime   | ProbUp | Signal"
     )
-    lines.append(header)
-    lines.append("-" * len(header))
+    lines.append(
+        "-" * 110
+    )
 
-    if df is None or df.empty:
+    if df.empty:
         lines.append("No forecast results (data fetch failed).")
-        lines.append("")
     else:
-        # sichere Spalten
-        for col in ["asset", "prev_close", "close", "daily_return", "signal", "confidence", "regime", "prob_up", "rule"]:
-            if col not in df.columns:
-                df[col] = None
-
-        for _, r in df.iterrows():
-            asset = str(r["asset"])
-            prev_close = _fmt_float(r["prev_close"], 2)
-            close = _fmt_float(r["close"], 2)
-            dlt = _fmt_pct(r["daily_return"])
-            signal = str(r["signal"])
-            conf = _fmt_float(r["confidence"], 2)
-            regime = str(r["regime"])
-            probup = _fmt_float(r["prob_up"], 2)
-            rule = str(r["rule"]) if pd.notna(r["rule"]) else _rule_text(asset)
-
+        for _, row in df.iterrows():
             lines.append(
-                f"{asset:<8} | {prev_close:>9} | {close:>7} | {dlt:>6} | {signal:<6} | {conf:>4} | {regime:<8} | {probup:>5} | {rule}"
+                f"{row['asset']:<8} | "
+                f"{row['prev_close']:>10.2f} | "
+                f"{row['close']:>7.2f} | "
+                f"{row['daily_return']:>6.2f}% | "
+                f"{row['confidence']:>4.2f} | "
+                f"{row['regime']:<8} | "
+                f"{row['prob_up']:>6.2f} | "
+                f"{row['signal']:<5}"
             )
 
-        lines.append("")
-
-    # Regeln-Block (immer anzeigen)
     lines.append("")
-    lines.append("TRADING RULES (Thresholds)")
     lines.append("")
-    for asset, cfg in FILTER_PARAMS.items():
-        long_thr = cfg.get("long_thr")
-        short_thr = cfg.get("short_thr")
-        note = cfg.get("note", "")
+    lines.append("TRADING RULES")
+    lines.append("-" * 20)
+    lines.append("DAX     LONG >= 0.56 | SHORT <= 0.44")
+    lines.append("ATX     LONG >= 0.58 | SHORT <= 0.42")
+    lines.append("DOW     LONG >= 0.55 | SHORT <= 0.45")
+    lines.append("NASDAQ  LONG >= 0.60 | SHORT <= 0.40")
+    lines.append("SP500   LONG >= 0.56 | SHORT <= 0.44")
+    lines.append("NIKKEI  LONG >= 0.59 | SHORT <= 0.41")
 
-        lines.append(asset)
-        if long_thr is None or short_thr is None:
-            lines.append("- n/a")
-        else:
-            lines.append(f"- LONG  if prob_up >= {long_thr:.2f}")
-            lines.append(f"- SHORT if prob_up <= {short_thr:.2f}")
-            lines.append("- Otherwise: HOLD")
-            if note:
-                lines.append(f"- Note: {note}")
-        lines.append("")
-
-    with open(filename, "w", encoding="utf-8") as f:
+    with open(filename, "w") as f:
         f.write("\n".join(lines))
+
+    print(f"Saved: {filename}")
